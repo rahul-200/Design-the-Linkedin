@@ -1,0 +1,31 @@
+Design a Linkedin
+
+Problem:
+We need to design a system to create differnt types of user profiles based on their roles using a design pattern.
+The roles may be professional,Recruiter and Company
+Each type of user profile will have distinct properties and behaviours such as the type of information displayed or the kind of actions they can perform.
+However, you don’t want to instantiate the profile objects directly, because you might need to add additional logic in the future (such as user validation, 
+error handling, or logging). Instead, you would like to provide an abstract way to create user profiles based on the role, allowing you to decouple 
+the creation logic from the rest of the application.
+
+Factory method Pattern:
+The Factory Method Pattern defines an interface for creating an object, but it allows subclasses to alter the type of objects that will be created. 
+This is useful when you want to delegate the responsibility of instantiating objects to subclasses.
+This pattern is particularly useful in a system like LinkedIn, where user roles and profiles may evolve over time, 
+and you need a flexible way to create different profile types.
+
+Problem:
+You need to manage a centralized logging service that tracks user activity across different parts of the system (e.g., when a user logs in, updates their profile, or interacts with connections). 
+The logging system needs to maintain a single instance to avoid performance issues and ensure consistency in logging across the entire application. 
+You don’t want to create multiple instances of the logging service because it would lead to unnecessary overhead and potential issues with conflicting logs.
+
+Singleton Pattern:
+The Singleton Pattern ensures that a class has only one instance and provides a global point of access to that instance.
+
+Problem: Job seekers want to be notified when a new job post (matching their skills or preferences) is posted.
+
+Observer Pattern (Behavioral Pattern):
+The Observer Pattern can be used to notify job seekers when a new job matching their preferences is posted. This is similar to how LinkedIn sends notifications to users about relevant job opportunities.
+
+Problem: Job seekers want to be notified when a new job post (matching their skills or preferences) is posted.
+Solution: Implement the Observer Pattern where job seekers (observers) are notified when a new job post (subject) is created.
